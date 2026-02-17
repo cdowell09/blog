@@ -1,6 +1,6 @@
 +++
 title = "Context Loss in AI-Assisted Development"
-date = 2026-02-17T08:00:00-08:00
+date = 2026-02-16T08:00:00-08:00
 draft = false
 description = "AI accelerates code output but amplifies the oldest problem in software: losing the why behind decisions."
 tags = ["ai", "developer-workflows", "engineering"]
