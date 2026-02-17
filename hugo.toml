@@ -1,0 +1,31 @@
+baseURL = "https://example.com/"
+languageCode = "en-us"
+title = "Christian's Blog"
+enableRobotsTXT = true
+
+[params]
+  description = "Thoughtful notes on software, systems, and shipping useful things."
+  defaultImage = "/images/og-default.svg"
+
+[params.author]
+  name = "Christian Dowell"
+  email = "hello@example.com"
+
+[outputs]
+  home = ["html", "rss"]
+  section = ["html", "rss"]
+  taxonomy = ["html"]
+  term = ["html"]
+
+[permalinks]
+  posts = "/posts/:slugorcontentbasename/"
+
+[sitemap]
+  changefreq = "weekly"
+  filename = "sitemap.xml"
+  priority = 0.5
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = false

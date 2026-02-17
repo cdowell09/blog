@@ -1,0 +1,23 @@
+{{ define "main" }}
+  <section class="hero">
+    <h1>{{ site.Title }}</h1>
+    <p>{{ .Description | default site.Params.description }}</p>
+  </section>
+
+  <section>
+    <h2>Latest posts</h2>
+    <ul class="post-list">
+      {{ range first 10 (where site.RegularPages "Section" "posts").ByDate.Reverse }}
+        <li>
+          <article>
+            <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+            <p class="meta">{{ .Date.Format "Jan 2, 2006" }}</p>
+            <p>{{ .Description | default .Summary }}</p>
+          </article>
+        </li>
+      {{ else }}
+        <li><p>No posts yet.</p></li>
+      {{ end }}
+    </ul>
+  </section>
+{{ end }}
